@@ -12,7 +12,7 @@ public class Prompt
     {
 
         var rand = new Random();
-        string data = $"Write a short piece with the prompt {prompt[rand.Next(1, prompt.Count)]} in the genre {genres[rand.Next(1, genres.Count)]}.";
+        string data = $"Write a short piece with the prompt {prompt[rand.Next(0, prompt.Count)]} in the genre {genres[rand.Next(0, genres.Count)]}.";
         Console.WriteLine(data);
 
         return data;
