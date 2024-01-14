@@ -1,0 +1,21 @@
+﻿@page "/"
+
+<h1>Hello, world!</h1>
+<button onclick="@GeneratePromptDataAsync">Generate Prompt</button>
+
+@code
+{
+    private string PromptResult;
+
+    private async Task GeneratePromptDataAsync()
+    {
+        var PromptGenerator = new Prompt();
+        PromptResult = await PromptGenerator.PromptData();
+        StateHasChanged();
+
+
+        Console.WriteLine("I've been clicked");
+    }
+}
+
+<p>@PromptResult</p>
