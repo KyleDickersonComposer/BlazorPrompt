@@ -13,7 +13,7 @@ public class Prompt
 
         var rand = new Random();
         string data = $"Write a short piece with the prompt {prompt[rand.Next(0, prompt.Count)]} in the genre {genres[rand.Next(0, genres.Count)]}.";
-        await Task.Delay(1000);
+        await Task.Delay(250);
 
         return data;
     }
