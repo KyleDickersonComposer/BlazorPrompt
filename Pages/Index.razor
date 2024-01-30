@@ -1,11 +1,11 @@
 ﻿@page "/"
 
 <h1>Hello, world!</h1>
-<button onclick="@GeneratePromptDataAsync">Generate Prompt</button>
+<button onclick="GeneratePromptDataAsync">Generate Prompt</button>
 
 @code
 {
-    private string PromptResult;
+    private string? PromptResult;
 
     private async Task GeneratePromptDataAsync()
     {
