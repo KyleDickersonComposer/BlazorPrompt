@@ -8,14 +8,14 @@ public class Prompt
 {
      "dance", "scherzo", "battle", "explore", "action", "ambient", "ballad", "chase", "love", "uplifting", "inspirational", "quirky", "underwater", "fire", "space", "rain", "volcano", "death", "fear", "legere", "filigre"
 };
-    public Task<string> PromptData()
+    public async Task<string> PromptData()
     {
 
         var rand = new Random();
         string data = $"Write a short piece with the prompt {prompt[rand.Next(0, prompt.Count)]} in the genre {genres[rand.Next(0, genres.Count)]}.";
-        Console.WriteLine(data);
+        await Task.Delay(1000);
 
-        return Task.FromResult(data);
+        return data;
     }
 }
 
